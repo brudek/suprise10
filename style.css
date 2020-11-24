@@ -1,3 +1,7 @@
+:root{
+    --windows-blue: #02cbff;
+}
+
 /* Intro */
 #Intro {
     position: absolute;
@@ -24,6 +28,82 @@
 }
 
 #WindowsLogo .grid {
-    background-color: #02cbff;
+    background-color: var(--windows-blue);
     margin: 2px;
+}
+
+#WindowSpinner {
+    grid-area: 2 / 2 / span 1 / span 1;
+    justify-self: center;
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.spinner-ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: spinner 2s linear infinite;
+}
+
+.spinner-ball:nth-of-type(1){
+    animation-delay: 150ms;
+}
+
+.spinner-ball:nth-of-type(2){
+    animation-delay: 300ms;
+}
+
+.spinner-ball:nth-of-type(3){
+    animation-delay: 450ms;
+}
+
+.spinner-ball:nth-of-type(4){
+    animation-delay: 600ms;
+}
+
+.spinner-ball:nth-of-type(5){
+    animation-delay: 750ms;
+}
+
+.spinner-ball:nth-of-type(6){
+    animation-delay: 900ms;
+}
+
+.spinner-ball:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    45%{
+        transform: rotate(160deg);
+    }
+    55%{
+        transform: rotate(185deg);
+    }
+    90%{
+        transform: rotate(350deg);
+        opacity: 1;
+    }
+    91%{
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
 }
