@@ -209,3 +209,11 @@ form#LoginForm {
     color: #fff;
     cursor: pointer;
 }
+
+/* Desktop */
+body.desktop{
+    background-image: url(wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
