@@ -217,3 +217,36 @@ body.desktop{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+footer#MenuBar {
+    background-color: #2c3640;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 240px calc(100% - 400px) 160px;
+}
+
+.application-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.application-icons div.application-icon {
+    text-align: center;
+    background: none;
+    border: none !important;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 0;
+    width: 100%;
+}
+
+.application-icons div.application-icon:hover{
+    background-color: rgba(255,255,255,.1);
+}
+
+.application-icons div.application-icon .fa-search{
+    transform: rotateY(180deg);
+}
