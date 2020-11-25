@@ -2,6 +2,16 @@
 
 :root{
     --windows-blue: #02cbff;
+    --grid-blue:#0078d7;
+    --grid-red: #d03438;
+    --grid-green: #0f7c0f;
+    --grid-orange: #dc3c02;
+    --grid-purple: #80397b;
+    --grid-darkblue: #4269a5;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html, body{
@@ -9,6 +19,7 @@ html, body{
     padding: 0;
     width: 100%;
     height: 100vh;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Intro */
@@ -99,7 +110,6 @@ html, body{
 }
 
 #StartTitle{
-    font-family: 'Lato', sans-serif;
     grid-area: 2 / 1 / span 1 / span 1;
     justify-self: center;
     align-self: end;
@@ -188,7 +198,6 @@ html, body{
 #LoginUser H2 {
     text-align: center;
     color: #fff;
-    font-family: 'Lato', sans-serif;
     font-size: 40px;
     line-height: 0;
 }
@@ -238,13 +247,13 @@ footer#MenuBar {
     background: none;
     border: none !important;
     outline: none;
-    cursor: pointer;
-    padding: 12px 0;
     width: 100%;
+    position: relative;
 }
 
-div.application-icon{
-    position: relative;
+.application-icons div.application-icon img {
+    cursor: pointer;
+    padding: 12px 0;
 }
 
 div.application-icon input[type="file"]{
@@ -252,6 +261,8 @@ div.application-icon input[type="file"]{
     height: 100%;
     position: absolute;
     opacity: 0;
+    left: 0;
+    cursor: pointer;
 }
 
 .application-icons div.application-icon:hover{
@@ -270,4 +281,121 @@ div.application-icon input[type="file"]{
 
 input#search{
     padding: 10px 5px;
+}
+
+.application-icons div#LogoWindows:hover #MenuStart{
+    display: grid !important;
+    opacity: 1;
+}
+
+#MenuStart {
+    display: none;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    min-width: 400px;
+    min-height: 400px;
+    background-color: rgba(34, 38, 42, 0.6);
+    grid-template-columns: 50px 260px 320px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#MenuLeft {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+}
+
+#MenuLeft:hover {
+    width: 260px;
+    box-shadow: 4px 1px 2px rgba(0,0,0,.3);
+}
+
+#MenuLeft span {
+    margin-left: 20px;
+    display: none;
+}
+
+#MenuLeft:hover span{
+    display: inline-block;
+}
+
+#MenuLeft .menu-icon {
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+#MenuLeft .menu-icon:hover{
+    background-color: rgba(255,255,255,.1);
+}
+
+#StickyMenu {
+    justify-self: center;
+    align-self: flex-start;
+}
+
+#PowerMenu {
+    align-self: end;
+    display: grid;
+    width: 100%;
+}
+
+#MenuList {
+    grid-column-start: 2;
+}
+
+#MenuGrids {
+    display: grid;
+    grid-column-start: 3;
+    grid-template-columns: repeat(3, 33.3%);
+    justify-content: space-between;
+}
+
+.grid{
+    margin: 5px;
+    cursor: pointer;
+}
+
+.grid:hover{
+    filter: brightness(1.1);
+}
+
+.grid.double {
+    grid-area: span 1 / span 2;
+}
+
+.grid.blue{   
+    background-color: var(--grid-blue);
+}
+
+.grid.darkblue{   
+    background-color: var(--grid-darkblue);
+}
+
+.grid.red{   
+    background-color: var(--grid-red);
+}
+
+.grid.green{   
+    background-color: var(--grid-green);
+}
+
+.grid.orange{   
+    background-color: var(--grid-orange);
+}
+
+.grid.purple{   
+    background-color: var(--grid-purple);
 }
