@@ -25,6 +25,7 @@ html, body{
     animation: intro 6s linear;
     animation-iteration-count: 1;
     transform: scale(0);
+    z-index: 2;
 }
 
 #WindowsLogo {
@@ -137,19 +138,74 @@ html, body{
     80%{
         opacity: 1;
     }
-    99%{
+    95%{
         transform: scale(1);
+        opacity: 1;
+    }
+    98%{
+        transform: scale(0);
+        opacity: 0;
     }
     100%{
         transform: scale(0);    
         opacity: 0;
+        z-index: -1;
     }
 }
 
-/* desktop */
-body {
-    background-image: url(wallpaper.jpg);
+/* login screen */
+#Login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: calc(50% - 40px) 80px calc(50% - 40px);
+    justify-content: center;
+    background-image: url(login_wallpaper.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#LoginCircle {
+    background-color: rgba(155,155,155,0.8);
+    width: 180px;
+    height: 180px;
+    align-self: end;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#LoginCircle i.fa.fa-user-o {
+    color: #fff;
+    font-size: 80px;
+}
+
+#LoginUser H2 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    line-height: 0;
+}
+
+form#LoginForm {
+    display: flex;
+    align-self: self-start;
+    box-shadow: 0 0 2px 1px #fff;
+}
+
+#LoginForm input, #LoginForm button{
+    background-color: rgba(255,255,255,0.7);
+    border: none;
+    outline: none;
+}
+
+#LoginForm button i{
+    color: #fff;
+    cursor: pointer;
 }
