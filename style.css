@@ -2,6 +2,7 @@
 
 :root{
     --windows-blue: #02cbff;
+    --hover-bg: rgba(255,255,255,.1);
     --grid-blue:#0078d7;
     --grid-red: #d03438;
     --grid-green: #0f7c0f;
@@ -258,7 +259,7 @@ footer#MenuBar {
     position: relative;
 }
 
-.application-icons div.application-icon img {
+.application-icons div.application-icon > img, .application-icons div.application-icon > a > img {
     cursor: pointer;
     padding: 12px 0;
 }
@@ -273,7 +274,7 @@ div.application-icon input[type="file"]{
 }
 
 .application-icons div.application-icon:hover{
-    background-color: rgba(255,255,255,.1);
+    background-color: var(--hover-bg);
 }
 
 .application-icons div.application-icon .fa-search{
@@ -300,12 +301,13 @@ input#search{
     position: absolute;
     bottom: 45px;
     left: 0;
-    min-width: 400px;
-    min-height: 400px;
+    height: 480px;
+    max-height: calc(100vh - 45px);
     background-color: rgba(34, 38, 42, 0.6);
     grid-template-columns: 50px 260px 320px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    overflow: hidden;
 }
 
 #MenuLeft {
@@ -320,6 +322,7 @@ input#search{
 #MenuLeft:hover {
     width: 260px;
     box-shadow: 4px 1px 2px rgba(0,0,0,.3);
+    background-color: rgba(34, 38, 42, 0.99);
 }
 
 #MenuLeft span {
@@ -345,7 +348,7 @@ input#search{
 }
 
 #MenuLeft .menu-icon:hover{
-    background-color: rgba(255,255,255,.1);
+    background-color: var(--hover-bg);
 }
 
 #PowerMenu {
@@ -362,18 +365,81 @@ input#search{
 
 #MenuList {
     grid-column-start: 2;
+    overflow: hidden;
+}
+
+#scrollContainer {
+    width: calc(100% + 50px);
+    overflow-y: scroll;
+    height: 100%;
+    padding-right: 40px;
+}
+
+#MenuList ul{
+    text-align: left;
+    list-style: none;
+    color: #fff;
+    font-size: 12px;
+    padding-inline-start: 0;
+}
+
+#MenuList ul h4{
+    padding-left: 6px;
+}
+
+#MenuList ul li{
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    padding: 2px 2px 2px 6px; 
+    cursor: pointer;
+}
+
+#MenuList ul li:hover{
+    background-color: var(--hover-bg);
+}
+
+#MenuList ul li span {
+    margin-left: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+#MenuList ul li img[src="images/list-folder-icon.jpg"] + span:after {
+    content: 'V';
+    float: right;
+    margin-right: 5px;
 }
 
 #MenuGrids {
     display: grid;
     grid-column-start: 3;
     grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(4, 25%);
     justify-content: space-between;
+    padding: 30px 30px 30px 0;
 }
 
-.grid{
+.grid {
     margin: 5px;
     cursor: pointer;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100% - 2em) 2em;
+}
+
+.grid img {
+    justify-self: center;
+    align-self: center;
+}
+
+.grid span {
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0,0,0,.9);
+    font-size: 12px;
+    align-self: center;
+    justify-self: start;
+    padding: 0 6px;
 }
 
 .grid:hover{
