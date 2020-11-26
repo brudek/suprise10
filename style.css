@@ -9,6 +9,7 @@
     --grid-orange: #dc3c02;
     --grid-purple: #80397b;
     --grid-darkblue: #4269a5;
+    --grid-gray: #5f6368;
 }
 
 * {
@@ -472,4 +473,8 @@ input#search{
 
 .grid.purple{   
     background-color: var(--grid-purple);
+}
+
+.grid.gray{   
+    background-color: var(--grid-gray);
 }
