@@ -243,7 +243,7 @@ footer#MenuBar {
     left: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: 240px calc(100% - 400px) 160px;
+    grid-template-columns: 240px calc(100% - 420px) 180px;
 }
 
 .application-icons {
@@ -305,7 +305,7 @@ input#search{
     height: 480px;
     max-height: calc(100vh - 45px);
     background-color: rgba(34, 38, 42, 0.6);
-    grid-template-columns: 50px 260px 320px;
+    grid-template-columns: 50px 260px 380px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     overflow: hidden;
@@ -422,7 +422,7 @@ input#search{
 }
 
 .grid {
-    margin: 5px;
+    margin: 3px;
     cursor: pointer;
     display: grid;
     grid-template-columns: 100%;
@@ -477,4 +477,19 @@ input#search{
 
 .grid.gray{   
     background-color: var(--grid-gray);
+}
+
+.clock-icons {
+    grid-column-start: 3;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30px 30px 60px 30px;
+}
+
+.clock-icons > div {
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    padding: 0 5px;
 }
