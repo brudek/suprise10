@@ -145,21 +145,13 @@ html, body{
         transform: scale(1);
         opacity: 1;
     }
-    80%{
-        opacity: 1;
-    }
-    95%{
+    97%{
         transform: scale(1);
         opacity: 1;
     }
     98%{
         transform: scale(0);
         opacity: 0;
-    }
-    100%{
-        transform: scale(0);    
-        opacity: 0;
-        z-index: -1;
     }
 }
 
@@ -173,10 +165,6 @@ html, body{
     display: grid;
     grid-template-rows: calc(50% - 40px) 80px calc(50% - 40px);
     justify-content: center;
-    background-image: url(login_wallpaper.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #LoginCircle {
@@ -217,6 +205,25 @@ form#LoginForm {
 #LoginForm button i{
     color: #fff;
     cursor: pointer;
+}
+
+#BlurOnFocusBG{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(login_wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(0);
+    transition: filter 0.5s linear;
+}
+
+#LoginForm input:focus ~ #BlurOnFocusBG{
+    filter: blur(8px);
 }
 
 /* Desktop */
