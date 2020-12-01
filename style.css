@@ -2,6 +2,18 @@
 
 :root{
     --windows-blue: #02cbff;
+    --hover-bg: rgba(255,255,255,.1);
+    --grid-blue:#0078d7;
+    --grid-red: #d03438;
+    --grid-green: #0f7c0f;
+    --grid-orange: #dc3c02;
+    --grid-purple: #80397b;
+    --grid-darkblue: #4269a5;
+    --grid-gray: #5f6368;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html, body{
@@ -9,6 +21,7 @@ html, body{
     padding: 0;
     width: 100%;
     height: 100vh;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Intro */
@@ -99,7 +112,6 @@ html, body{
 }
 
 #StartTitle{
-    font-family: 'Lato', sans-serif;
     grid-area: 2 / 1 / span 1 / span 1;
     justify-self: center;
     align-self: end;
@@ -135,21 +147,13 @@ html, body{
         transform: scale(1);
         opacity: 1;
     }
-    80%{
-        opacity: 1;
-    }
-    95%{
+    97%{
         transform: scale(1);
         opacity: 1;
     }
     98%{
         transform: scale(0);
         opacity: 0;
-    }
-    100%{
-        transform: scale(0);    
-        opacity: 0;
-        z-index: -1;
     }
 }
 
@@ -163,10 +167,6 @@ html, body{
     display: grid;
     grid-template-rows: calc(50% - 40px) 80px calc(50% - 40px);
     justify-content: center;
-    background-image: url(login_wallpaper.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #LoginCircle {
@@ -188,7 +188,6 @@ html, body{
 #LoginUser H2 {
     text-align: center;
     color: #fff;
-    font-family: 'Lato', sans-serif;
     font-size: 40px;
     line-height: 0;
 }
@@ -208,4 +207,289 @@ form#LoginForm {
 #LoginForm button i{
     color: #fff;
     cursor: pointer;
+}
+
+#BlurOnFocusBG{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/login_wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(0);
+    transition: filter 0.5s linear;
+}
+
+#LoginForm input:focus ~ #BlurOnFocusBG{
+    filter: blur(8px);
+}
+
+/* Desktop */
+body.desktop{
+    background-image: url(images/wallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer#MenuBar {
+    background-color: #2c3640;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 240px calc(100% - 420px) 180px;
+}
+
+.application-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.application-icons div.application-icon {
+    text-align: center;
+    background: none;
+    border: none !important;
+    outline: none;
+    width: 100%;
+    position: relative;
+}
+
+.application-icons div.application-icon > img, .application-icons div.application-icon > a > img {
+    cursor: pointer;
+    padding: 12px 0;
+}
+
+div.application-icon input[type="file"]{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.application-icons div.application-icon:hover{
+    background-color: var(--hover-bg);
+}
+
+.application-icons div.application-icon .fa-search{
+    transform: rotateY(180deg);
+}
+
+.application-icon[title="Wyszukaj"]:hover .search-form{
+    display: block !important;
+    position: absolute;
+    top: -37px;
+}
+
+input#search{
+    padding: 10px 5px;
+}
+
+.application-icons div#LogoWindows:hover #MenuStart{
+    display: grid !important;
+    opacity: 1;
+}
+
+#MenuStart {
+    display: none;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    height: 480px;
+    max-height: calc(100vh - 45px);
+    background-color: rgba(34, 38, 42, 0.6);
+    grid-template-columns: 50px 260px 380px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow: hidden;
+}
+
+#MenuLeft {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+}
+
+#MenuLeft:hover {
+    width: 260px;
+    box-shadow: 4px 1px 2px rgba(0,0,0,.3);
+    background-color: rgba(34, 38, 42, 0.99);
+}
+
+#MenuLeft span {
+    margin-left: 20px;
+    display: none;
+}
+
+#MenuLeft:hover span{
+    display: inline-block;
+}
+
+#MenuLeft .menu-icon {
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+#MenuLeft .menu-icon:hover{
+    background-color: var(--hover-bg);
+}
+
+#PowerMenu {
+    align-self: end;
+    display: grid;
+    width: 100%;
+}
+
+#StickyMenu {
+    align-self: start;
+    width: 100%;
+    font-weight: bold;
+}
+
+#MenuList {
+    grid-column-start: 2;
+    overflow: hidden;
+}
+
+#scrollContainer {
+    width: calc(100% + 50px);
+    overflow-y: scroll;
+    height: 100%;
+    padding-right: 40px;
+}
+
+#MenuList ul{
+    text-align: left;
+    list-style: none;
+    color: #fff;
+    font-size: 12px;
+    padding-inline-start: 0;
+}
+
+#MenuList ul h4{
+    padding-left: 6px;
+}
+
+#MenuList ul li{
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    padding: 2px 2px 2px 6px; 
+    cursor: pointer;
+}
+
+#MenuList ul li:hover{
+    background-color: var(--hover-bg);
+}
+
+#MenuList ul li span {
+    margin-left: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+#MenuList ul li img[src="images/list-folder-icon.jpg"] + span:after {
+    content: 'V';
+    float: right;
+    margin-right: 5px;
+}
+
+#MenuGrids {
+    display: grid;
+    grid-column-start: 3;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(4, 25%);
+    justify-content: space-between;
+    padding: 30px 30px 30px 0;
+}
+
+.grid {
+    margin: 3px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100% - 2em) 2em;
+}
+
+.grid img {
+    justify-self: center;
+    align-self: center;
+}
+
+.grid span {
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(0,0,0,.9);
+    font-size: 12px;
+    align-self: center;
+    justify-self: start;
+    padding: 0 6px;
+}
+
+.grid:hover{
+    filter: brightness(1.1);
+}
+
+.grid.double {
+    grid-area: span 1 / span 2;
+}
+
+.grid.blue{   
+    background-color: var(--grid-blue);
+}
+
+.grid.darkblue{   
+    background-color: var(--grid-darkblue);
+}
+
+.grid.red{   
+    background-color: var(--grid-red);
+}
+
+.grid.green{   
+    background-color: var(--grid-green);
+}
+
+.grid.orange{   
+    background-color: var(--grid-orange);
+}
+
+.grid.purple{   
+    background-color: var(--grid-purple);
+}
+
+.grid.gray{   
+    background-color: var(--grid-gray);
+}
+
+.clock-icons {
+    grid-column-start: 3;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30px 30px 60px 30px;
+}
+
+.clock-icons > div {
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    padding: 0 5px;
 }
