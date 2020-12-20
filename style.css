@@ -295,6 +295,7 @@ input#search{
 .application-icons div#LogoWindows:hover #MenuStart{
     display: grid !important;
     opacity: 1;
+    padding-top: 15px;
 }
 
 #MenuStart {
