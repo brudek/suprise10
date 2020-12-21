@@ -1,6 +1,8 @@
 # CodersCamp 2020 - Projekt HTML & CSS
 **CodersCamp (coderscamp.edu.pl) - Największy otwarty kurs programowania webowego** 
 
+![Alt text](images\screens\screen-menu_start.jpg?raw=true "Windows 10 HTML")
+
 Projekt, który w założeniu miał być wizytówką/portfolio, przy wykorzystaniu wyłącznie HTML-a i CSS-a, bez żadnych zewnętrznych bibliotek i frameworków (za wyjątkiem ikon typu fontawesome czy czcionek typu Google Fonts).
 Jako, że layout Windowsa 10 daje możliwość pokazania wszystkich punktów określonych w projekcie postanowiłem wykorzystać właśnie wygląd Windowsa 10 do stworzenia strony internetowej.
 
@@ -8,6 +10,17 @@ Jako, że layout Windowsa 10 daje możliwość pokazania wszystkich punktów okr
 Pierwsza część projektu, która będzie rozwijana wraz z kolejnymi etapami kursu. W pierwszej części logowanie czy otwieranie menu są zrobione bez JavaScriptu, logowanie za pomocą animacji i formularza z akcją nowej strony, natomiast rozwijanie menu czy podmenu za pomocą css-owej pseudo klasy - :hovera. 
 W dalszej części planuję dodać akcje jsa, a jeszcze później klikalne aplikacje Windowsa typu kalkular, pain, przeglądarka czy gry, np. saper.
 
+Widok loadera z animacją kręcących się kółek, z przejściem po kilku sekundach do ekranu logowania:
+![Alt text](images\screens\screen-intro.jpg?raw=true "Windows 10 HTML")
+
+Widok ekranu logowania:
+![Alt text](images\screens\screen-login.jpg?raw=true "Windows 10 HTML")
+
+Efekt płynnego blura po kliknięciu w formularz logowania wykonany za pomocą psudo klasy css :focus i html filter blur:
+![Alt text](images\screens\screen-login-focus-blur.jpg?raw=true "Windows 10 HTML")
+
+Widok rozwiniętego menu z podmenu, w wersji pierwszej jako :hover :
+![Alt text](images\screens\screen-menu_start_2.jpg?raw=true "Windows 10 HTML")
 .............................................................................................................................................................
 
 
