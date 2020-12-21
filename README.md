@@ -1,7 +1,7 @@
 # CodersCamp 2020 - Projekt HTML & CSS
 **CodersCamp (coderscamp.edu.pl) - Największy otwarty kurs programowania webowego** 
 
-![Alt text](https://raw.github.com/brudek/suprise10/main/images/screens/screen-menu_start.jpg?raw=true "Windows 10 HTML")
+![image](https://user-images.githubusercontent.com/31479697/102770324-3d697e80-4384-11eb-8ad9-e60b04a41899.jpg "Windows 10 HTML")
 
 Projekt, który w założeniu miał być wizytówką/portfolio, przy wykorzystaniu wyłącznie HTML-a i CSS-a, bez żadnych zewnętrznych bibliotek i frameworków (za wyjątkiem ikon typu fontawesome czy czcionek typu Google Fonts).
 Jako, że layout Windowsa 10 daje możliwość pokazania wszystkich punktów określonych w projekcie postanowiłem wykorzystać właśnie wygląd Windowsa 10 do stworzenia strony internetowej.
