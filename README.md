@@ -1,7 +1,7 @@
 # CodersCamp 2020 - Projekt HTML & CSS
 **CodersCamp (coderscamp.edu.pl) - Największy otwarty kurs programowania webowego** 
 
-![image](https://user-images.githubusercontent.com/31479697/102770324-3d697e80-4384-11eb-8ad9-e60b04a41899.jpg "Windows 10 HTML")
+![image](https://user-images.githubusercontent.com/31479697/102770677-d00a1d80-4384-11eb-97d5-61d2c6337fd8.jpg "Windows 10 HTML")
 
 Projekt, który w założeniu miał być wizytówką/portfolio, przy wykorzystaniu wyłącznie HTML-a i CSS-a, bez żadnych zewnętrznych bibliotek i frameworków (za wyjątkiem ikon typu fontawesome czy czcionek typu Google Fonts).
 Jako, że layout Windowsa 10 daje możliwość pokazania wszystkich punktów określonych w projekcie postanowiłem wykorzystać właśnie wygląd Windowsa 10 do stworzenia strony internetowej.
@@ -11,16 +11,18 @@ Pierwsza część projektu, która będzie rozwijana wraz z kolejnymi etapami ku
 W dalszej części planuję dodać akcje jsa, a jeszcze później klikalne aplikacje Windowsa typu kalkular, pain, przeglądarka czy gry, np. saper.
 
 Widok loadera z animacją kręcących się kółek, z przejściem po kilku sekundach do ekranu logowania:
-![Alt text](https://raw.github.com/brudek/suprise10/main/images/screens/screen-intro.jpg?raw=true "Windows 10 HTML")
+![image](https://user-images.githubusercontent.com/31479697/102770324-3d697e80-4384-11eb-8ad9-e60b04a41899.jpg "Windows 10 HTML")
 
 Widok ekranu logowania:
-![Alt text](https://raw.github.com/brudek/suprise10/main/images/screens/screen-login.jpg?raw=true "Windows 10 HTML")
+![image](https://user-images.githubusercontent.com/31479697/102770733-eb752880-4384-11eb-8207-95c0151df186.jpg "Windows 10 HTML")
 
 Efekt płynnego blura po kliknięciu w formularz logowania wykonany za pomocą psudo klasy css :focus i html filter blur:
-![Alt text](https://raw.github.com/brudek/suprise10/main/images/screens/screen-login-focus-blur.jpg?raw=true "Windows 10 HTML")
+![image](https://user-images.githubusercontent.com/31479697/102770821-11023200-4385-11eb-89a8-b3e687607c2f.jpg "Windows 10 HTML")
 
 Widok rozwiniętego menu z podmenu, w wersji pierwszej jako :hover :
-![Alt text](https://raw.github.com/brudek/suprise10/main/images/screens/screen-menu_start_2.jpg?raw=true "Windows 10 HTML")
+![image](https://user-images.githubusercontent.com/31479697/102770881-25dec580-4385-11eb-85b2-9e0f47ec762a.jpg "Windows 10 HTML")
+
+
 .............................................................................................................................................................
 
 
