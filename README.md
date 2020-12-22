@@ -23,6 +23,16 @@ Widok rozwiniętego menu z podmenu, w wersji pierwszej jako :hover :
 ![image](https://user-images.githubusercontent.com/31479697/102770881-25dec580-4385-11eb-85b2-9e0f47ec762a.jpg "Windows 10 HTML")
 
 
+
+**Widoki mobilne**
+
+Widok smartphone portait mode:
+![image](https://user-images.githubusercontent.com/31479697/102883090-b4b81480-444f-11eb-9191-5b6004632b81.png)
+
+Widok smartphone portait mode:
+![image](https://user-images.githubusercontent.com/31479697/102883493-68b99f80-4450-11eb-9d9d-2a5dfddecbdd.png)
+
+
 .............................................................................................................................................................
 
 
