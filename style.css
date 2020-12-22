@@ -516,7 +516,7 @@ input#search{
         padding: 10px 10px 10px 0;
     }
 
-    .grid{
+    #MenuGrids .grid{
         grid-template-rows: calc(100% - 15px) 15px;
     }
 }
@@ -601,16 +601,13 @@ input#search{
         width: 100%;
     }
 
-    .grid{
+    #MenuGrids .grid{
         padding: 5px;
         min-width: 100px;
-    }
-
-    .grid{
         width: calc(50% - 6px);
     }
 
-    .grid span{
+    #MenuGrids .grid span{
         justify-self: center;
     }
 }
