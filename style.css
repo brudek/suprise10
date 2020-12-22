@@ -561,6 +561,10 @@ input#search{
         height: calc(100vh - 45px);
     }
 
+    #MenuGrids .scroll-container{
+        padding-right: 10px;
+    }
+
     footer#MenuBar{
         grid-template-columns: calc(100% - 100px) 100px;
     }
