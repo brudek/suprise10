@@ -580,7 +580,7 @@ input#search{
 @media only screen and (max-width: 399px){
     #MenuStart{
         grid-template-columns: 50px calc(100% - 50px);
-        width: 100vw;
+        width: calc(100vw - 50px);
     }
 
     #MenuGrids{
