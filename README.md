@@ -77,7 +77,7 @@ Widok smartphone landscape mode:
 
 Widok smartphone menu landscape mode:
 
-![image](https://user-images.githubusercontent.com/31479697/102886697-e03dfd80-4455-11eb-9ce5-2227ca498cba.png)
+![image](https://user-images.githubusercontent.com/31479697/102886995-6b1ef800-4456-11eb-9200-c052dda01c75.png)
 
 .............................................................................................................................................................
 
