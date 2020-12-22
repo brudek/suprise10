@@ -558,7 +558,7 @@ input#search{
     }
 
     #MenuList{
-        height: calc(100vh - 45px);
+        height: 100%;
     }
 
     #MenuGrids .scroll-container{
