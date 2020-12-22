@@ -178,6 +178,7 @@ html, body{
     display: grid;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 #LoginCircle i.fa.fa-user-o {
@@ -202,6 +203,11 @@ form#LoginForm {
     background-color: rgba(255,255,255,0.7);
     border: none;
     outline: none;
+}
+
+#LoginForm input{
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 #LoginForm button i{
@@ -302,7 +308,7 @@ input#search{
     position: absolute;
     bottom: 45px;
     left: 0;
-    height: 480px;
+    height: 520px;
     max-height: calc(100vh - 45px);
     background-color: rgba(34, 38, 42, 0.6);
     grid-template-columns: 50px 260px 380px;
@@ -369,11 +375,11 @@ input#search{
     overflow: hidden;
 }
 
-#scrollContainer {
-    width: calc(100% + 50px);
+.scroll-container {
+    width: calc(100% + 60px);
     overflow-y: scroll;
     height: 100%;
-    padding-right: 40px;
+    padding-right: 60px;
 }
 
 #MenuList ul{
@@ -407,18 +413,28 @@ input#search{
 }
 
 #MenuList ul li img[src="images/list-folder-icon.jpg"] + span:after {
-    content: 'V';
+    content: "";
+    background: url(images/toggle_down.svg);
     float: right;
-    margin-right: 5px;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-#MenuGrids {
+#MenuGrids{
+    max-height: calc(100vh - 45px);
+    padding: 30px 30px 30px 0;
+}
+
+#MenuGrids .scroll-container{
     display: grid;
     grid-column-start: 3;
     grid-template-columns: repeat(3, 33.3%);
     grid-template-rows: repeat(4, 25%);
     justify-content: space-between;
-    padding: 30px 30px 30px 0;
 }
 
 .grid {
@@ -492,4 +508,108 @@ input#search{
     font-size: 12px;
     font-family: 'Lato', sans-serif;
     padding: 0 5px;
+}
+
+@media only screen and (max-width: 959px) {
+    #MenuGrids{
+        padding: 10px 10px 10px 0;
+    }
+
+    .grid{
+        grid-template-rows: calc(100% - 15px) 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #WindowsLogo{
+        width: 100px;
+        height: 100px; 
+    }
+
+    #WindowSpinner{
+        width: 30px;
+        height: 30px;
+    }
+
+    .spinner-ball:before{     
+        right: 50%;
+        width: 2px;
+        height: 2px;
+    }
+
+    #StartTitle {
+        grid-area: 3 / 1 / span 1 / span 1;
+        align-self: center;
+    }
+
+    #Login{
+        grid-template-rows: calc(60% - 40px) 80px calc(40% - 40px);
+    }
+
+    #LoginCircle {
+        width: 120px;
+        height: 120px;
+    }
+
+    #MenuStart{
+        height: calc(100vh - 45px);
+        max-height: 580px;
+    }
+
+    #MenuList{
+        height: calc(100vh - 45px);
+    }
+
+    footer#MenuBar{
+        grid-template-columns: calc(100% - 100px) 100px;
+    }
+
+    .clock-icons{
+        grid-column-start: 2;
+        grid-template-columns: 0 0 100% 0;
+        text-align: right;
+        padding: 0 5px;
+    }
+}
+
+@media only screen and (max-width: 399px){
+    #MenuStart{
+        grid-template-columns: 50px calc(100% - 50px);
+        width: 100vw;
+    }
+
+    #MenuGrids{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+    #MenuStart{
+        grid-template-columns: 50px 210px calc(100vw - 260px);
+        max-width: 510px;
+    }
+
+    #MenuGrids{
+        max-width: 250px;
+    }
+
+    #MenuGrids .scroll-container{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .grid{
+        padding: 5px;
+        min-width: 100px;
+    }
+
+    .grid{
+        width: calc(50% - 6px);
+    }
+
+    .grid span{
+        justify-self: center;
+    }
 }
